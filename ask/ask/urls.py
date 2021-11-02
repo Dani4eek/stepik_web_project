@@ -19,6 +19,8 @@ from django.conf.urls import url, include
 from django.contrib import admin
 admin.autodiscover()
 
+import qa.views
+
 urlpatterns = [
     url(r'^$', include('qa.views.test')),
     url(r'^login/$', include('qa.views.test')),
