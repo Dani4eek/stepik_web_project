@@ -19,14 +19,14 @@ from django.conf.urls import url, include
 from django.contrib import admin
 admin.autodiscover()
 
-import qa.views
+from qa.views import test
 
 urlpatterns = [
-    url(r'^$', include('qa.views.test')),
-    url(r'^login/$', include('qa.views.test')),
-    url(r'^signup/$', include('qa.views.test')),
-    url(r'^question/(\d+)$', include('qa.views.test')),
-    url(r'^ask/.*$', include('qa.views.test')),
-    url(r'^popular/$', include('qa.views.test')),
-    url(r'^new/$', include('qa.views.test')),
+    url(r'^$', test),
+    url(r'^login/$', test),
+    url(r'^signup/$', test),
+    url(r'^question/(\d+)$', test),
+    url(r'^ask/.*$', test),
+    url(r'^popular/$', test),
+    url(r'^new/$', test),
 ]
