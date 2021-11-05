@@ -1,4 +1,9 @@
 sudo /etc/init.d/mysql start
+mysql -uroot -e "create database stepik_web;"
+mysql -uroot -e "grant all privileges on stepik_web.* to 'box'@'localhost' with grant option;"
+~/web/ask/manage.py makemigrations
+~/web/ask/manage.py migrate
+
 
 sudo ln -sf /home/box/web/etc/nginx.conf /etc/nginx/sites-enabled/test.conf
 sudo rm -rf /etc/nginx/sites-enabled/default
