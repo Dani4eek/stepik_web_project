@@ -5,7 +5,7 @@ from django.db.models.fields.related import ForeignKey
 
 class QuestionManager(models.Manager):
     def new(self):
-        return self.order_by('-added_at')
+        return self.order_by('-id')
 
     def popular(self):
         return self.order_by('-rating')
