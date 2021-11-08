@@ -26,14 +26,14 @@ class AskForm(ModelForm):
 class AnswerForm(ModelForm):
     class Meta:
         model = Answer
-        fields = ['text']
-        # widgets = {
-        #     'text': Textarea(attrs={
-        #         "class": "form__text",
-        #     }),
-        #     'question': HiddenInput(),
-        #     'author': HiddenInput(),
-        # }
+        #fields = ['text']
+        widgets = {
+            'text': Textarea(attrs={
+                "class": "form__text",
+            }),
+            'question': HiddenInput(),
+            'author': HiddenInput(),
+        }
 
 
 class SignupForm(Form):
